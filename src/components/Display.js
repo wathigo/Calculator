@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 class Display extends Component{
   render(){
     return(
-      <div>
+      <div className='display'>
         {this.props.result}
       </div>
       );

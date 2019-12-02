@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 class Button extends Component{
   render(){
     return(
-      <button type="button">
+      <button type="button" className='calc-btn'>
         {this.props.content}
       </button>
       );

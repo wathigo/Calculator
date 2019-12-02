@@ -7,7 +7,7 @@ import Button from './Button'
 class ButtonPanel extends Component{
   render(){
     return(
-      <div>
+      <div className='button-panel'>
         <div className='group1'>
          <Button content='AC'/>
          <Button content='+/-'/>
