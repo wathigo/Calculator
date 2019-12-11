@@ -8,7 +8,7 @@ class Button extends Component {
   render() {
     const { content, wide, color } = this.props;
     return (
-      <button type="button" className={`${wide} calc-btn ${color}`}>
+      <button type="button" className={`${ wide === true ? 'w-50' : ''} calc-btn ${color}`}>
         {content}
       </button>
     );
@@ -18,12 +18,12 @@ class Button extends Component {
 Button.propTypes = {
   content: PropTypes.string.isRequired,
   color: PropTypes.string,
-  wide: PropTypes.string,
+  wide: PropTypes.bool,
 };
 
 Button.defaultProps = {
   color: 'cl-orange',
-  wide: 'w-25',
+  wide: false,
 };
 
 export default Button;

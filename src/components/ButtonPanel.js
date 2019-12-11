@@ -34,7 +34,7 @@ class ButtonPanel extends Component {
           <Button content="+" />
         </div>
         <div className="group5">
-          <Button content="0" wide="w-50" color="cl-light-grey" />
+          <Button content="0" wide={ true } color="cl-light-grey" />
           <Button content="." color="cl-light-grey" />
           <Button content="=" />
         </div>

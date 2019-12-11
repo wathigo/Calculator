@@ -18,6 +18,7 @@
   height: 100px;
   font-weight: bold;
   border: 0.0015em solid grey;
+  width: 25%;
 }
 
 .button-panel{
@@ -33,10 +34,6 @@
   background-color: orange;
 }
 
-.w-25 {
-  width: 25%;
-}
-
 .w-50 {
-  width: 50%
+  width: 50% !important;
 }
