@@ -8,7 +8,7 @@ class Display extends Component {
   render() {
     const { result } = this.props;
     return (
-      <div className='display'>
+      <div className="display">
         {result}
       </div>
     );
