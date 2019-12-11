@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 
-class Display extends Component{
-  render(){
-    return(
+class Display extends Component {
+  render() {
+    const { result } = this.props;
+    return (
       <div>
-        {this.props.result}
+        {result}
       </div>
-      );
+    );
   }
 }
 

@@ -2,16 +2,17 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 
-class Button extends Component{
-  render(){
-    return(
+class Button extends Component {
+  render() {
+    const { content } = this.props;
+    return (
       <button type="button">
-        {this.props.content}
+        {content}
       </button>
-      );
+    );
   }
 }
 
-Button.propTypes = { buttonName: PropTypes.string.isRequired };
+Button.propTypes = { content: PropTypes.string.isRequired };
 
 export default Button;
