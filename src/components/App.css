@@ -5,26 +5,38 @@
 
 .display{
   background: grey;
-  height: 100px;
+  max-height: 100px;
+  line-height: 100px;
   color: #fff;
   font-weight: bold;
+  font-size: 2em;
   text-align: right;
   padding: 2em;
 }
 
 .calc-btn{
-  width: 25%;
   height: 100px;
   font-weight: bold;
   border: 0.0015em solid grey;
-  background-color: orange;
 }
 
 .button-panel{
   display: flex;
   flex-direction: column;
 }
+/* Text */
+.cl-light-grey {
+  background-color: #d3d3d3;
+}
 
-.group5 button:first-of-type{
-  width: 50%;
+.cl-orange {
+  background-color: orange;
+}
+
+.w-25 {
+  width: 25%;
+}
+
+.w-50 {
+  width: 50%
 }

@@ -6,15 +6,24 @@ import PropTypes from 'prop-types';
 
 class Button extends Component {
   render() {
-    const { content } = this.props;
+    const { content, wide, color } = this.props;
     return (
-      <button type="button" className='calc-btn'>
+      <button type="button" className={ wide + ' calc-btn ' + color}>
         {content}
       </button>
     );
   }
 }
 
-Button.propTypes = { content: PropTypes.string.isRequired };
+Button.propTypes = {
+  content: PropTypes.string.isRequired,
+  color: PropTypes.string,
+  wide: PropTypes.string
+ };
+
+ Button.defaultProps = {
+   color: 'cl-orange',
+   wide: 'w-25'
+ };
 
 export default Button;
