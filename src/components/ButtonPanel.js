@@ -5,15 +5,15 @@ import React, { Component } from 'react';
 import Button from './Button';
 
 
-class ButtonPanel extends Component {
-  render() {
-    return (
-      <div>
-        <div className="group1">
-          <Button content="AC" />
-          <Button content="+/-" />
-          <Button content="X" />
-          <Button content="/" />
+class ButtonPanel extends Component{
+  render(){
+    return(
+      <div className='button-panel'>
+        <div className='group1'>
+         <Button content='AC'/>
+         <Button content='+/-'/>
+         <Button content='X'/>
+         <Button content='/'/>
         </div>
         <div className="group2">
           <Button content="7" />
