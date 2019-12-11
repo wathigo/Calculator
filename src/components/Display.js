@@ -17,4 +17,8 @@ class Display extends Component {
 
 Display.propTypes = { result: PropTypes.string.isRequired };
 
+Display.defaultProps = {
+  result: 0
+}
+
 export default Display;
