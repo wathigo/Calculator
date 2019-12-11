@@ -6,8 +6,8 @@ import Display from './Display';
 
 function App() {
   return (
-    <div className="app">
-      <Display result='0'/>
+    <div className="App">
+      <Display />
       <ButtonPanel/>
     </div>
   );
