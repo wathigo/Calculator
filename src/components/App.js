@@ -1,10 +1,14 @@
 import React from 'react';
 import './App.css';
 
+import ButtonPanel from './ButtonPanel';
+import Display from './Display';
+
 function App() {
   return (
     <div className="App">
-      <h1> Welcome to React Calculator </h1>
+      <Display />
+      <ButtonPanel/>
     </div>
   );
 }
