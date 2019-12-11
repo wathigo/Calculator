@@ -8,7 +8,7 @@ class Button extends Component {
   render() {
     const { content, wide, color } = this.props;
     return (
-      <button type="button" className={`${ wide === true ? 'w-50' : ''} calc-btn ${color}`}>
+      <button type="button" className={`${wide === true ? 'w-50' : ''} calc-btn ${color}`}>
         {content}
       </button>
     );
