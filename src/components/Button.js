@@ -8,7 +8,7 @@ class Button extends Component {
   render() {
     const { content } = this.props;
     return (
-      <button type="button">
+      <button type="button" className='calc-btn'>
         {content}
       </button>
     );
