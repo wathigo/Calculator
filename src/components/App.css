@@ -1,4 +1,4 @@
-.app{
+.App{
   width: 700px;
   margin: 0 auto;
 }
@@ -21,7 +21,7 @@
   width: 25%;
 }
 
-.button-panel{
+.button-panel, .App, .display{
   display: flex;
   flex-direction: column;
 }
