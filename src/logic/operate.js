@@ -8,16 +8,19 @@ const operate = (total, next, operation) => {
     case '+':
       result = num1 + num2;
       break;
-    case '-'
+    case '-':
       result = num1 - num2;
       break;
-    case '÷'
+    case '÷':
       result = num1 / num2;
       break;
-    case 'X';
+    case 'X':
       result = num1 * num2;
       break;
     default:
       break;
   }
+  return result
 }
+
+export default operate;

@@ -1,7 +1,8 @@
+import operate from './operate.js'
 
 const calculate = (calc, name) => {
 
-  const {total, next, operation} = calc;
+  let {total, next, operation} = calc;
   switch (name) {
     case '+/-':
       total = total * -1
@@ -13,6 +14,7 @@ const calculate = (calc, name) => {
     case 'AC':
       total = 0;
       next = 0;
+      break;
     default:
       total = operate(total, next, operation);
       break;
