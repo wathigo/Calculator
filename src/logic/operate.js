@@ -1,3 +1,5 @@
+/* eslint-disable import/extensions */
+
 const Big = require('big.js');
 
 const operate = (total, next, operation) => {

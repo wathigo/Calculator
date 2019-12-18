@@ -1,3 +1,6 @@
+/* eslint-disable import/extensions */
+/* eslint-disable prefer-const */
+
 import operate from './operate.js';
 
 const calculate = (calc, name) => {
