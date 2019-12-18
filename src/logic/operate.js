@@ -2,9 +2,9 @@
 
 const Big = require('big.js');
 
-const operate = (total, next, operation) => {
-  const num1 = Big(total);
-  const num2 = Big(next);
+const operate = (numberOne, numberTwo, operation) => {
+  const num1 = Big(numberOne);
+  const num2 = Big(numberTwo);
   let result;
   switch (operation) {
     case '+':
