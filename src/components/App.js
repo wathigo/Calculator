@@ -1,4 +1,5 @@
 /* eslint-disable no-unused-vars */
+/* eslint-disable import/extensions */
 
 import React from 'react';
 import './App.css';
