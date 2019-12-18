@@ -19,6 +19,7 @@
   font-weight: bold;
   border: 0.0015em solid grey;
   width: 25%;
+  font-size: 2em;
 }
 
 .button-panel, .App, .display{
