@@ -1,8 +1,8 @@
 const Big = require('big.js');
 
 const operate = (total, next, operation) => {
-  let num1 = Big(total);
-  let num2 = Big(next);
+  const num1 = Big(total);
+  const num2 = Big(next);
   let result;
   switch (operation) {
     case '+':
@@ -20,7 +20,7 @@ const operate = (total, next, operation) => {
     default:
       break;
   }
-  return result
-}
+  return result;
+};
 
 export default operate;

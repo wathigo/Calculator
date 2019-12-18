@@ -1,15 +1,14 @@
-import operate from './operate.js'
+import operate from './operate.js';
 
 const calculate = (calc, name) => {
-
-  let {total, next, operation} = calc;
+  let { total, next, operation } = calc;
   switch (name) {
     case '+/-':
-      total = total * -1
-      next = next * -1
+      total *= -1;
+      next *= -1;
       break;
     case '.':
-      total = parseFloat(`${total + '.' + next}`);
+      total = parseFloat(`${`${total}.${next}`}`);
       break;
     case 'AC':
       total = 0;
@@ -19,7 +18,7 @@ const calculate = (calc, name) => {
       total = operate(total, next, operation);
       break;
   }
-  return {total, next, operation}
+  return { total, next, operation };
 };
 
 export default calculate;
