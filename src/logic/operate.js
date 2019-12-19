@@ -7,7 +7,8 @@ const operate = (numberOne, numberTwo, operation) => {
   let result;
   switch (operation) {
     case '+':
-      result = num1 + num2;
+    console.log('tf')
+      result = Number(num1) + Number(num2);
       break;
     case '-':
       result = num1 - num2;

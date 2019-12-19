@@ -10,33 +10,33 @@ class ButtonPanel extends Component {
     return (
       <div className="button-panel">
         <div className="group1">
-          <Button content="AC" color="cl-light-grey" />
-          <Button content="+/-" color="cl-light-grey" />
-          <Button content="X" color="cl-light-grey" />
-          <Button content="÷" />
+          <Button handleClick={this.props.clickHandler} content="AC" color="cl-light-grey" />
+          <Button handleClick={this.props.clickHandler} content="+/-" color="cl-light-grey" />
+          <Button handleClick={this.props.clickHandler} content="X" color="cl-light-grey" />
+          <Button handleClick={this.props.clickHandler} content="÷" />
         </div>
         <div className="group2">
-          <Button content="7" color="cl-light-grey" />
-          <Button content="8" color="cl-light-grey" />
-          <Button content="9" color="cl-light-grey" />
-          <Button content="X" />
+          <Button handleClick={this.props.clickHandler} content="7" color="cl-light-grey" />
+          <Button handleClick={this.props.clickHandler} content="8" color="cl-light-grey" />
+          <Button handleClick={this.props.clickHandler} content="9" color="cl-light-grey" />
+          <Button handleClick={this.props.clickHandler} content="X" />
         </div>
         <div className="group3">
-          <Button content="4" color="cl-light-grey" />
-          <Button content="5" color="cl-light-grey" />
-          <Button content="6" color="cl-light-grey" />
-          <Button content="-" />
+          <Button handleClick={this.props.clickHandler} content="4" color="cl-light-grey" />
+          <Button handleClick={this.props.clickHandler} content="5" color="cl-light-grey" />
+          <Button handleClick={this.props.clickHandler} content="6" color="cl-light-grey" />
+          <Button handleClick={this.props.clickHandler} content="-" />
         </div>
         <div className="group4">
-          <Button content="1" color="cl-light-grey" />
-          <Button content="2" color="cl-light-grey" />
-          <Button content="3" color="cl-light-grey" />
-          <Button content="+" />
+          <Button handleClick={this.props.clickHandler} content="1" color="cl-light-grey" />
+          <Button handleClick={this.props.clickHandler} content="2" color="cl-light-grey" />
+          <Button handleClick={this.props.clickHandler} content="3" color="cl-light-grey" />
+          <Button handleClick={this.props.clickHandler} content="+" />
         </div>
         <div className="group5">
-          <Button content="0" wide color="cl-light-grey" />
-          <Button content="." color="cl-light-grey" />
-          <Button content="=" />
+          <Button handleClick={this.props.clickHandler} content="0" wide color="cl-light-grey" />
+          <Button handleClick={this.props.clickHandler} content="." color="cl-light-grey" />
+          <Button handleClick={this.props.clickHandler} content="=" />
         </div>
       </div>
     );
