@@ -4,24 +4,26 @@
 import operate from './operate.js';
 
 const calculate = (calc, name) => {
-  let { total, next, operation } = calc;
+  const { total, next, operation } = calc;
+  let newTotal = total;
+  let newNext = next;
   switch (name) {
     case '+/-':
-      total *= -1;
-      next *= -1;
+      newTotal *= -1;
+      newNext *= -1;
       break;
     case '.':
-      total = parseFloat(`${`${total}.${next}`}`);
+      newTotal = parseFloat(`${`${total}.${next}`}`);
       break;
     case 'AC':
-      total = 0;
-      next = 0;
+      newTotal = 0;
+      newNext = 0;
       break;
     default:
-      total = operate(total, next, operation);
+      newTotal = operate(total, next, operation);
       break;
   }
-  return { total, next, operation };
+  return { total: newTotal, next: newNext, operation };
 };
 
 export default calculate;

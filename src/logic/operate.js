@@ -1,6 +1,5 @@
 /* eslint-disable import/extensions */
-
-const Big = require('big.js');
+import Big from 'big.js';
 
 const operate = (numberOne, numberTwo, operation) => {
   const num1 = Big(numberOne);
