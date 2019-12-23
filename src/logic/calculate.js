@@ -19,7 +19,9 @@ const calculate = (calc, name) => {
       newTotal = '';
       break;
     default:
-      newTotal = operate(total, next, operation);
+      if(parseInt(total) !== NaN || parseInt(next) !== NaN){
+        newTotal = operate(total, next, operation);
+      }
       break;
   }
   return { total: newTotal, next: newNext, operation };

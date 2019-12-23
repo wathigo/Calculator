@@ -56,7 +56,7 @@ class App extends Component {
     const { result } = this.state;
     return (
       <div className="App">
-        <Display result={result === null ? 0 : result} />
+        <Display result={result === null ? 0 : parseFloat(result)} />
         <ButtonPanel clickHandler={this.handleClick} />
       </div>
     );
