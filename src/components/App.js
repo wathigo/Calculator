@@ -34,15 +34,17 @@ class App extends Component {
     } else if (!isNaN(buttonName)) {
       this.setState({ next: `${next + buttonName}` });
     }
-    if (buttonName === '=' || buttonName === 'AC') {
+    if (buttonName === '=' || buttonName === 'AC' || buttonName === '+/-') {
       if (buttonName === 'AC') {
+        this.setState({ operation: buttonName });
+      } else if (buttonName === '+/-') {
         this.setState({ operation: buttonName });
       }
       this.setState((prevState) => {
         const result = calculate(prevState, buttonName);
         return {
           total: result.total,
-          next: '',
+          next: result.next,
           operation: null,
           result: result.total,
         };
