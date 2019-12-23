@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 
 class Display extends Component {
   render() {
-    const { result, buttonName } = this.props;
+    const { result } = this.props;
     return (
       <div className="display">
 

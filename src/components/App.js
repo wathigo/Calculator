@@ -10,43 +10,51 @@ import Display from './Display';
 import calculate from '../logic/calculate.js';
 
 class App extends Component {
-  constructor(){
-    super()
+  constructor() {
+    super();
     this.state = {
       total: '',
       next: '',
       operation: null,
-      result: null
-    }
+      result: null,
+    };
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick(evt){
+  handleClick(evt) {
     const buttonName = evt.target.textContent;
-    console.log(buttonName, this.state)
-    if(this.state.operation === null && !isNaN(buttonName)){
-      this.setState({ total: `${this.state.total + buttonName }`});
-    }else if(this.state.total !== null && this.state.operation === null){
+    const {
+      total, next, operation, result,
+    } = this.state;
+    if (operation === null && !isNaN(buttonName)) {
+      this.setState({ total: `${total + buttonName}` });
+    } else if (total !== null && operation === null) {
       this.setState({ operation: buttonName });
-    }else if(!isNaN(buttonName)){
-      this.setState({ next: `${this.state.next + buttonName }`})
-      console.log(this.state)
+    } else if (!isNaN(buttonName)) {
+      this.setState({ next: `${next + buttonName}` });
+      console.log(this.state);
+    }
+    if (buttonName === '=' || buttonName === 'AC') {
+      if (buttonName === 'AC') {
+        this.setState({ operation: buttonName });
+      }
+      const result = calculate(this.state, buttonName);
+      console.log(result.total);
+      this.setState({
+        total: result.total,
+        next: '',
+        operation: null,
+      });
+      this.setState({ result: result.total });
+    } else if (buttonName === '') {
 
     }
-    if (buttonName === '='){
-      let result = calculate(this.state)
-      this.setState({ result: result.total})
-      this.setState({
-        total: '',
-        next: '',
-        operation: null
-      })
-    }
   }
-  render(){
+
+  render() {
     return (
       <div className="App">
-        <Display result={this.state.result} />
+        <Display result={this.state.result === null ? '0' : this.state.result} />
         <ButtonPanel clickHandler={this.handleClick} />
       </div>
     );

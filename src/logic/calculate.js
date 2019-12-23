@@ -16,8 +16,7 @@ const calculate = (calc, name) => {
       newTotal = parseFloat(`${`${total}.${next}`}`);
       break;
     case 'AC':
-      newTotal = 0;
-      newNext = 0;
+      newTotal = '';
       break;
     default:
       newTotal = operate(total, next, operation);

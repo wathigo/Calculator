@@ -5,7 +5,7 @@
 
 .display{
   background: grey;
-  max-height: 100px;
+  height: 70px;
   line-height: 100px;
   color: #fff;
   font-weight: bold;
@@ -15,7 +15,7 @@
 }
 
 .calc-btn{
-  height: 100px;
+  height: 94px;
   font-weight: bold;
   border: 0.0015em solid grey;
   width: 25%;
