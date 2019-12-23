@@ -34,7 +34,6 @@ class App extends Component {
     } else if (!isNaN(buttonName)) {
       this.setState({ next: `${next + buttonName}` });
     }
-    console.log(this.state)
     if (buttonName === '=' || buttonName === 'AC' || buttonName === '+/-') {
       if (buttonName === 'AC') {
         this.setState({ operation: buttonName });
