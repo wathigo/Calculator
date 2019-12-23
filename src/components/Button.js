@@ -1,4 +1,5 @@
 /* eslint-disable react/prefer-stateless-function */
+/* eslint-disable object-curly-newline */
 
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
@@ -19,6 +20,7 @@ Button.propTypes = {
   content: PropTypes.string.isRequired,
   color: PropTypes.string,
   wide: PropTypes.bool,
+  handleClick: PropTypes.func.isRequired,
 };
 
 Button.defaultProps = {

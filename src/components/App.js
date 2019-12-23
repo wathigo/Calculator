@@ -38,21 +38,23 @@ class App extends Component {
       if (buttonName === 'AC') {
         this.setState({ operation: buttonName });
       }
-      const result = calculate(this.state, buttonName);
-      this.setState({
-        total: result.total,
-        next: '',
-        operation: null,
-      });
-      this.setState({ result: result.total });
+      this.setState(prevState => {
+        const result = calculate(prevState, buttonName);
+        return {
+          total: result.total,
+          next: '',
+          operation: null,
+          result: result.total,
+        }
+      })
     }
   }
 
   render() {
-    const { result } = this.state
+    const { result } = this.state;
     return (
       <div className="App">
-        <Display result={result === null ? 0 : this.state.result} />
+        <Display result={result === null ? 0 : result} />
         <ButtonPanel clickHandler={this.handleClick} />
       </div>
     );
