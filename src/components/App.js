@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable import/extensions */
+/* eslint-disable no-restricted-globals */
 
 import React, { Component } from 'react';
 import './App.css';
@@ -32,29 +33,26 @@ class App extends Component {
       this.setState({ operation: buttonName });
     } else if (!isNaN(buttonName)) {
       this.setState({ next: `${next + buttonName}` });
-      console.log(this.state);
     }
     if (buttonName === '=' || buttonName === 'AC') {
       if (buttonName === 'AC') {
         this.setState({ operation: buttonName });
       }
       const result = calculate(this.state, buttonName);
-      console.log(result.total);
       this.setState({
         total: result.total,
         next: '',
         operation: null,
       });
       this.setState({ result: result.total });
-    } else if (buttonName === '') {
-
     }
   }
 
   render() {
+    const { result } = this.state
     return (
       <div className="App">
-        <Display result={this.state.result === null ? '0' : this.state.result} />
+        <Display result={result === null ? 0 : this.state.result} />
         <ButtonPanel clickHandler={this.handleClick} />
       </div>
     );

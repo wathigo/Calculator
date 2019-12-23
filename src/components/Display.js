@@ -16,8 +16,8 @@ class Display extends Component {
   }
 }
 
-Display.propTypes = { result: PropTypes.string };
+Display.propTypes = { result: PropTypes.number };
 
-Display.defaultProps = { result: '0' };
+Display.defaultProps = { result: 0 };
 
 export default Display;
