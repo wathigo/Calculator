@@ -38,15 +38,15 @@ class App extends Component {
       if (buttonName === 'AC') {
         this.setState({ operation: buttonName });
       }
-      this.setState(prevState => {
+      this.setState((prevState) => {
         const result = calculate(prevState, buttonName);
         return {
           total: result.total,
           next: '',
           operation: null,
           result: result.total,
-        }
-      })
+        };
+      });
     }
   }
 
