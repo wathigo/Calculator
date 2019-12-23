@@ -46,7 +46,7 @@ class App extends Component {
           total: result.total,
           next: result.next,
           operation: null,
-          result: result.total,
+          result: result.total === '' ? null : result.total,
         };
       });
     }
