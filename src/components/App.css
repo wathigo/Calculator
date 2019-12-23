@@ -22,6 +22,12 @@
   font-size: 2em;
 }
 
+.calc-btn:hover {
+  border-width: 0.1em;
+  border-color: #000;
+  border-style: ridge;
+}
+
 .button-panel, .App, .display{
   display: flex;
   flex-direction: column;
