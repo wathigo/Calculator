@@ -1,5 +1,6 @@
 /* eslint-disable import/extensions */
 /* eslint-disable prefer-const */
+/* eslint-disable use-isnan */
 
 import operate from './operate.js';
 
@@ -19,7 +20,7 @@ const calculate = (calc, name) => {
       newTotal = '';
       break;
     default:
-      if(parseInt(total) !== NaN || parseInt(next) !== NaN){
+      if (parseInt(total, 10) !== NaN || parseInt(next, 10) !== NaN) {
         newTotal = operate(total, next, operation);
       }
       break;
