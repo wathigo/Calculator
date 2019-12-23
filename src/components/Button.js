@@ -6,9 +6,9 @@ import PropTypes from 'prop-types';
 
 class Button extends Component {
   render() {
-    const { content, wide, color } = this.props;
+    const { content, wide, color, handleClick } = this.props;
     return (
-      <button onClick={this.props.handleClick} type="button" className={`${wide === true ? 'w-50' : ''} calc-btn ${color}`}>
+      <button onClick={handleClick} type="button" className={`${wide === true ? 'w-50' : ''} calc-btn ${color}`}>
         {content}
       </button>
     );
