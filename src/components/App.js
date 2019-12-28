@@ -27,7 +27,7 @@ class App extends Component {
     const {
       total, next, operation, result,
     } = this.state;
-    if (operation === null && !isNaN(buttonName)) {
+    if (operation === null && !isNaN(buttonName) && next === '') {
       this.setState({
         total: `${total + buttonName}`,
         result: `${result + buttonName}`,
@@ -53,9 +53,9 @@ class App extends Component {
         const result = calculate(prevState, buttonName);
         return {
           total: result.total,
-          next: '',
-          operation: null,
-          result: result.total === '' ? '' : result.total,
+          next: result.next,
+          operation: result.operation,
+          result: buttonName === '=' ? result.total : result.result,
         };
       });
     }

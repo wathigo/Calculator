@@ -5,10 +5,13 @@
 import operate from './operate.js';
 
 const calculate = (calc, name) => {
-  const { total, next, operation } = calc;
+  const {
+    total, next, operation, result,
+  } = calc;
   let newTotal = total;
   let newNext = next;
   let newOp = operation;
+  let newResult = result;
   switch (name) {
     case '+/-':
       newTotal *= -1;
@@ -17,8 +20,10 @@ const calculate = (calc, name) => {
     case '.':
       if (operation !== null) {
         newNext = `${`${next}.`}`;
+        newResult = `${newResult}.`;
       } else {
         newTotal = `${`${total}.${next}`}`;
+        newResult = `${newResult}.`;
       }
       break;
     case 'AC':
@@ -32,7 +37,9 @@ const calculate = (calc, name) => {
       }
       break;
   }
-  return { total: newTotal, next: newNext, operation: newOp };
+  return {
+    total: newTotal, next: newNext, operation: newOp, result: newResult,
+  };
 };
 
 export default calculate;
