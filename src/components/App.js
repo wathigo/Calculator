@@ -17,7 +17,7 @@ class App extends Component {
       total: '',
       next: '',
       operation: null,
-      result: null,
+      result: '',
     };
     this.handleClick = this.handleClick.bind(this);
   }
@@ -28,13 +28,22 @@ class App extends Component {
       total, next, operation, result,
     } = this.state;
     if (operation === null && !isNaN(buttonName)) {
-      this.setState({ total: `${total + buttonName}` });
-    } else if (total !== null && operation === null) {
-      this.setState({ operation: buttonName });
+      this.setState({
+        total: `${total + buttonName}`,
+        result: `${result + buttonName}`,
+      });
+    } else if (total !== '' && operation === null && buttonName !== '.') {
+      this.setState({
+        operation: buttonName,
+        result: `${`${result} ${buttonName} `}`,
+      });
     } else if (!isNaN(buttonName)) {
-      this.setState({ next: `${next + buttonName}` });
+      this.setState({
+        next: `${next + buttonName}`,
+        result: `${result + buttonName}`,
+      });
     }
-    if (buttonName === '=' || buttonName === 'AC' || buttonName === '+/-') {
+    if (buttonName === '=' || buttonName === 'AC' || buttonName === '+/-' || buttonName === '.') {
       if (buttonName === 'AC') {
         this.setState({ operation: buttonName });
       } else if (buttonName === '+/-') {
@@ -46,7 +55,7 @@ class App extends Component {
           total: result.total,
           next: '',
           operation: null,
-          result: result.total === '' ? null : result.total,
+          result: result.total === '' ? '' : result.total,
         };
       });
     }
@@ -56,7 +65,7 @@ class App extends Component {
     const { result } = this.state;
     return (
       <div className="App">
-        <Display result={result === null ? 0 : parseFloat(result)} />
+        <Display result={result === '' ? '0' : result.toString()} />
         <ButtonPanel clickHandler={this.handleClick} />
       </div>
     );

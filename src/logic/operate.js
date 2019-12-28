@@ -7,7 +7,7 @@ const operate = (numberOne, numberTwo, operation) => {
   let result;
   switch (operation) {
     case '+':
-      result = Number(num1) + Number(num2);
+      result = parseFloat(num1) + parseFloat(num2);
       break;
     case '-':
       result = num1 - num2;
