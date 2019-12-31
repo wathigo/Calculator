@@ -33,7 +33,7 @@ const calculate = (calc, name) => {
           newNext = `${`${next}.`}`;
           newResult = `${newResult}.`;
         } else {
-          newTotal = `${`${total}.${next}`}`;
+          newTotal = `${total}.`;
           newResult = `${newResult}.`;
         }
         break;
