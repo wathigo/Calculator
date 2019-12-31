@@ -24,9 +24,6 @@ class App extends Component {
 
   handleClick(evt) {
     const buttonName = evt.target.textContent;
-    const {
-      total, next, operation, result,
-    } = this.state;
     this.setState((prevState) => {
       const result = calculate(prevState, buttonName);
       return {
