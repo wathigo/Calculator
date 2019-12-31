@@ -1,0 +1,46 @@
+.App{
+  width: 700px;
+  margin: 0 auto;
+}
+
+.display{
+  background: grey;
+  height: 70px;
+  line-height: 100px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 2em;
+  text-align: right;
+  padding: 2em;
+}
+
+.calc-btn{
+  height: 94px;
+  font-weight: bold;
+  border: 0.0015em solid grey;
+  width: 25%;
+  font-size: 2em;
+}
+
+.calc-btn:hover {
+  border-width: 0.1em;
+  border-color: #000;
+  border-style: ridge;
+}
+
+.button-panel, .App, .display{
+  display: flex;
+  flex-direction: column;
+}
+/* Text */
+.cl-light-grey {
+  background-color: #d3d3d3;
+}
+
+.cl-orange {
+  background-color: orange;
+}
+
+.w-50 {
+  width: 50% !important;
+}
