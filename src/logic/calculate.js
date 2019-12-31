@@ -14,7 +14,7 @@ const calculate = (calc, name) => {
   let newOp = operation;
   let newResult = result;
   if (!isNaN(name)) {
-    if (newTotal.length === 0 || newTotal.toString().slice(-1) === '.') {
+    if (newTotal.length === 0 || newTotal.toString().slice(-1) === '.' || newOp === null) {
       newTotal = `${newTotal}${name}`;
       newResult = `${newResult}${name}`;
     } else {
@@ -26,7 +26,12 @@ const calculate = (calc, name) => {
       case '+/-':
         newTotal *= -1;
         newNext *= -1;
-        newResult = newTotal;
+        if (newTotal !== '') {
+          newResult = newTotal;
+        } else {
+          newResult = newNext;
+        }
+
         break;
       case '.':
         if (operation !== null) {
