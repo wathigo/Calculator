@@ -53,7 +53,7 @@ const calculate = (calc, name) => {
         break;
       default:
         newOp = name;
-        newResult = `${newResult}${newOp}`;
+        newResult = `${newResult} ${newOp} `;
         break;
     }
   }
