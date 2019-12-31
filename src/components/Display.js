@@ -9,6 +9,7 @@ class Display extends Component {
     const { result } = this.props;
     return (
       <div className="display">
+
         {result}
       </div>
     );
@@ -17,6 +18,6 @@ class Display extends Component {
 
 Display.propTypes = { result: PropTypes.string };
 
-Display.defaultProps = { result: '0' };
+Display.defaultProps = { result: 0 };
 
 export default Display;
