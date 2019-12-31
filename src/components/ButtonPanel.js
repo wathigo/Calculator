@@ -9,10 +9,10 @@ import Button from './Button';
 class ButtonPanel extends Component {
   render() {
     const { clickHandler } = this.props;
-    const group1 = ['AC', '+/-', 'X', '÷'].map((val) => <Button key={val} handleClick={clickHandler} content={val} color="cl-light-grey" />);
-    const group2 = ['7', '8', '9', 'X'].map((val) => <Button key={val} handleClick={clickHandler} content={val} color="cl-light-grey" />);
-    const group3 = ['4', '5', '6', '-'].map((val) => <Button key={val} handleClick={clickHandler} content={val} color="cl-light-grey" />);
-    const group4 = ['1', '2', '3', '+'].map((val) => <Button key={val} handleClick={clickHandler} content={val} color="cl-light-grey" />);
+    const group1 = ['AC', '+/-', 'X', '÷'].map(val => <Button key={val} handleClick={clickHandler} content={val} color="cl-light-grey" />);
+    const group2 = ['7', '8', '9', 'X'].map(val => <Button key={val} handleClick={clickHandler} content={val} color="cl-light-grey" />);
+    const group3 = ['4', '5', '6', '-'].map(val => <Button key={val} handleClick={clickHandler} content={val} color="cl-light-grey" />);
+    const group4 = ['1', '2', '3', '+'].map(val => <Button key={val} handleClick={clickHandler} content={val} color="cl-light-grey" />);
     const group5 = ['0', '.', '='].map((val, index) => {
       if (index !== 2) {
         if (val === '0') {
