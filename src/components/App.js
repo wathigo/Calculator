@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable import/extensions */
-/* eslint-disable no-restricted-globals */
+/* eslint-disable react/no-unused-state */
 
 import React, { Component } from 'react';
 import './App.css';
