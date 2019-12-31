@@ -27,38 +27,15 @@ class App extends Component {
     const {
       total, next, operation, result,
     } = this.state;
-    if (operation === null && !isNaN(buttonName) && next === '') {
-      this.setState({
-        total: `${total + buttonName}`,
-        result: `${result + buttonName}`,
-      });
-    } else if (total !== '' && operation === null && buttonName !== '.') {
-      this.setState({
-        operation: buttonName,
-        result: `${`${result} ${buttonName} `}`,
-      });
-    } else if (!isNaN(buttonName)) {
-      this.setState({
-        next: `${next + buttonName}`,
-        result: `${result + buttonName}`,
-      });
-    }
-    if (buttonName === '=' || buttonName === 'AC' || buttonName === '+/-' || buttonName === '.') {
-      if (buttonName === 'AC') {
-        this.setState({ operation: buttonName });
-      } else if (buttonName === '+/-') {
-        this.setState({ operation: buttonName });
-      }
-      this.setState((prevState) => {
-        const result = calculate(prevState, buttonName);
-        return {
-          total: result.total,
-          next: result.next,
-          operation: result.operation,
-          result: buttonName === '=' ? result.total : result.result,
-        };
-      });
-    }
+    this.setState((prevState) => {
+      const result = calculate(prevState, buttonName);
+      return {
+        total: result.total,
+        next: result.next,
+        operation: result.operation,
+        result: buttonName === '=' ? result.total : result.result,
+      };
+    });
   }
 
   render() {
