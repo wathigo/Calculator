@@ -1,6 +1,7 @@
 /* eslint-disable import/extensions */
 /* eslint-disable prefer-const */
 /* eslint-disable use-isnan */
+/* eslint-disable no-restricted-globals */
 
 import operate from './operate.js';
 
