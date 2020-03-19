@@ -1,45 +1,59 @@
+@font-face {
+  font-family: 'MyWebFont';
+  src:  url('calc.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+
 .App{
+  font-family: 'MyWebFont';
   width: 70vw;
   min-height: 100vh;
   margin: 0 auto;
 }
 
 .display{
-  background: grey;
-  height: 12vh;
+  background: #000;
+  height: 25vh;
   line-height: 12vh;
   color: #fff;
   font-weight: bold;
   font-size: 2em;
   text-align: right;
-  padding: 1.5em;
+  padding: 0.8em;
+  box-sizing: border-box;
 }
 
 .calc-btn{
-  height: 3.08em;
+  font-family: inherit;
+  height: 100%;
   font-weight: bold;
-  border: 0.0015em solid grey;
   width: 25%;
   font-size: 2em;
+  box-sizing: border-box;
+  border: 0.0009em solid #000;
 }
 
-.calc-btn:hover {
-  border-width: 0.1em;
-  border-color: #000;
-  border-style: ridge;
+button:hover {
+  border: none !important;
 }
 
 .button-panel, .App, .display{
   display: flex;
   flex-direction: column;
 }
+
+.group1, .group2, .group3, .group4, .group5 {
+  height: 14.9vh;
+}
+
 /* Text */
 .cl-light-grey {
-  background-color: #d3d3d3;
+  background-color: grey;
+  color: #ffffff;
 }
 
 .cl-orange {
-  background-color: orange;
+  background-color: #FA8072;
+  color: #fff;
 }
 
 .w-50 {
@@ -49,9 +63,5 @@
 @media only screen and (max-width:790px) {
   .App {
     width: 100vw;
-  }
-
-  .calc-btn {
-    height: 2.6em;
   }
 }

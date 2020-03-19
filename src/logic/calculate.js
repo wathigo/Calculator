@@ -57,6 +57,11 @@ const calculate = (calc, name) => {
         }
         break;
       default:
+        if (total !== '' && next !== '' && operation !== null) {
+          newTotal = operate(total, next, operation);
+          newNext = '';
+          newResult = newTotal;
+        }
         newOp = name;
         newResult = `${newResult} ${newOp} `;
         break;
