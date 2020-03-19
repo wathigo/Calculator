@@ -26,7 +26,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-<a href="#">
+<a href="#" align="center">
    <img src="images/calc.png" alt="about">
  </a>
 The purpose of this project is to have a great introduction to react.
