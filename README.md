@@ -4,7 +4,7 @@
     React Project
     <br />
     <br />
-    <a href="">View Demo</a>
+    <a href="https://fracalc.herokuapp.com/">View Demo</a>
     ·
     <a href="https://github.com/wathigo/Calculator/issues">Report Bug</a>
     ·
