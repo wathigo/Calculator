@@ -44,7 +44,7 @@ Clone the repository to your working environment.
 ```
 git clone git@github.com:wathigo/Calculator.git
 ```
-Install dependencies
+Install dependancies
 
 ```
 npm -i
