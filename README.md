@@ -33,9 +33,6 @@
 </p>
 The purpose of this project is to have a great introduction to react.
 
-## Tests
-Currently, there are no tests for this project.
-
 The work done so far can be seen in the following url:
 
 Deployed to heroku in https://fracalc.herokuapp.com/
@@ -59,7 +56,8 @@ Run the project on a local server
 npm start
 ```
 
-
+## Tests
+Currently, there are no tests for this project.
 
 ### Built With
 * [React](https://reactjs.org/)
