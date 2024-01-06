@@ -34,7 +34,7 @@ The purpose of this project is to have a great introduction to react.
 
 The work done so far can be seen in the following url:
 
-Deployed to heroku in https://fracalc.herokuapp.com/
+Deployed in netlify. [Live link](https://pracalc.netlify.app/)
 
 ### Deployment
 
