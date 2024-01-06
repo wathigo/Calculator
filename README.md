@@ -4,7 +4,7 @@
     React Project
     <br />
     <br />
-    <a href="https://fracalc.herokuapp.com/">View Demo</a>
+    <a href="https://pracalc.netlify.app/">View Demo</a>
     ·
     <a href="https://github.com/wathigo/Calculator/issues">Report Bug</a>
     ·
@@ -12,20 +12,19 @@
   </p>
 </p>
 
-
 <!-- TABLE OF CONTENTS -->
+
 ## Table of Contents
 
-* [About the Project](#about-the-project)
-  * [Built With](#built-with)
-  * [Deployment](#Deployment)
-* [Contact](#Contact)
-
-
-
+- [About the Project](#about-the-project)
+  - [Built With](#built-with)
+  - [Deployment](#Deployment)
+- [Contact](#Contact)
 
 <!-- ABOUT THE PROJECT -->
+
 ## About The Project
+
 <p align="center">
  <a href="#">
    <img src="images/calc.png" alt="about">
@@ -44,6 +43,7 @@ Clone the repository to your working environment.
 ```
 git clone git@github.com:wathigo/Calculator.git
 ```
+
 Install dependancies
 
 ```
@@ -57,10 +57,13 @@ npm start
 ```
 
 ## Tests
+
 Currently, there are no tests for this project.
 
 ### Built With
-* [React](https://reactjs.org/)
+
+- [React](https://reactjs.org/)
 
 ### Contact
-* [Simon Wathigo](https://github.com/wathigo) - wathigosimon@gmail.com - [Linkedin](https://www.linkedin.com/in/simon-wathigo-445370183/)
+
+- [Simon Wathigo](https://github.com/wathigo) - wathigosimon@gmail.com - [Linkedin](https://www.linkedin.com/in/simon-wathigo-445370183/)
